@@ -1,0 +1,229 @@
+*{
+    padding: 0; /*indent (inside)*/
+    margin: 0; /*indent (outside)*/
+    /*border: 0;*/
+    text-transform: uppercase;
+    font-family: "Segoe UI Black";
+
+}
+*,*:before,*:after{ /*changes block width count, so we can make comfy make up of the page*/
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*zeroing line circle in some browsers*/
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*make some html tags block-tags*/
+nav,footer,header,aside{display: block;}
+html, body{ /*make normal font behaviour in some browsers*/
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 4vmin;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    color: lightgray; /*text colour*/
+
+}
+input,button,textarea{font-family: inherit;} /*make our form tags inherit family font*/
+
+/*zeroing some special parameters in browsers*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none; color: black;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;} /*zeroing all our titles h*/
+/*-------------------------------------------------------------------*/
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*background: linear-gradient(45deg, lightblue, #C5DDE8);*/
+    background: url(../img/Test_background.png) no-repeat fixed;
+    background-size: 100% auto;
+    /*filter: blur(3px) saturate(100%) brightness(95%);*/
+}
+header{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vmin; /*Quiz topic indent*/
+}
+
+input, option, select {
+    background: #c9d7f1;
+}
+
+.content{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.form-register form p:nth-child(3){ /*indent between 2 inputs*/
+    margin-top: 3vmin;
+}
+.form-register form p{
+    font-size: 3vmin;
+}
+.form-register form input{
+    width: 50vmin;
+    height: 5vmin;
+    border-radius: 2vmin;
+    border: 1px solid grey;
+    padding: 0 3vmin; /*text input indent*/
+}
+.form-register form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#startTest, #nextQuestion{
+    width: 35vmin;
+    height: 5.5vmin;
+    background: gray;
+    border-radius: 2vmin;
+    margin-top: 2.5vmin;
+    border: none;
+    font-size: 2.5vmin;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#startTest:hover{
+    transition: all 1s linear;
+    background: #6477EB;
+}
+.test{
+    width: 150vmin; /*questions width*/
+    height: 40vmin;
+    display: none;
+    justify-content: center;
+    padding: 0 1vmin;
+}
+.test form div{
+    font-size: 2.5vmin;
+    margin: 2vmin;
+}
+.test form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btn-next-block{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.result{
+    display: none;
+    font-size: 30px;
+}
+.test select{
+    width: 30vmin;
+    height: 5vmin;
+    border-radius: 2vmin;
+}
+/*drag-n-drop*/
+hr {
+  border-color: white;
+}
+#test__zv6{
+    display: none;
+}
+#formZvd6 {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vmin;
+    width: 30vmin;
+}
+
+.zv6__allBoxs {
+    width: 40vmin;
+    height: 20vmin;
+    bottom: 3vmin;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+}
+
+[class*="zv6__boxs"] {
+    width: 11vmin; /*3 choose boxes size*/
+    height: 13vmin;
+    border: 2px solid;
+}
+
+.zv6__allAnswers {
+    width: 40vmin;
+    height: 10vmin;
+    display: flex;
+    justify-content: space-between;
+}
+
+.zv6__answers {
+    border: 2px solid;
+    width: 11vmin;
+    height: 11vmin;
+    position: relative;
+}
+
+.zv__answers10 label {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.zv__answers10 label input {
+    position: relative;
+    left: 220px;
+    top: 20px;
+}
+#field-css{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+.sendForm{
+    position: absolute;
+    bottom: -5vmin;
+    z-index: -1;
+}
+.enableSendButton {
+    position: absolute;
+    bottom: 30vmin;
+    z-index: 6;
+
+}
+.SubmitButton{
+    width: 35vmin;
+    height: 5.5vmin;
+    background: gray;
+    border-radius: 2vmin;
+    margin-top: 2.5vmin;
+    border: none;
+    font-size: 2.5vmin;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.SubmitButton:hover {
+    transition: all 1s linear;
+    background: #6477EB;
+}

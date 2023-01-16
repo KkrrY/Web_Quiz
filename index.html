@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="Web_CSS/style.css" type="text/css" rel="stylesheet">
+    <title>Test</title>
+</head>
+<body >
+
+<div class="wrapper">
+    <header>
+        <h1>ТР-11 Шусть Кирило<br>
+            Основи JS. Робота з прототипами об'єктів</h1>
+    </header>
+    <div class="content">
+        <div class="form-register">
+            <form>
+                <div class="form__inputs">
+                    <p>ПІБ</p>
+                    <input type="text" id="name" required>
+                    <p>Група</p>
+                    <input type="text" id="groupData" required>
+                </div>
+                <div class="form__button">
+                    <button id="startTest">Почати тест</button>
+                </div>
+            </form>
+        </div>
+
+        <form class="sendForm">
+            <button type="submit" class="SubmitButton">Надіслати результати</button>
+        </form>
+
+        <div class="test">
+            <form>
+                <div id="questionNumber"></div>
+                <div id="questionText"></div>
+                <div class="test__task">
+
+                </div>
+                <div class="btn-next-block">
+                    <button id="nextQuestion">Далі</button>
+                </div>
+            </form>
+                <div id="test__zv6">
+                    <form id="formZvd6">
+                        <div class="zv6__allBoxs">
+                            <div class="zv6__boxs1" ondrop="drop(event)" ondragover="allowDrop(event)">HTML
+                                <hr id="hr1">
+                            </div>
+                            <div class="zv6__boxs2" ondrop="drop(event)" ondragover="allowDrop(event)">CSS
+                                <hr id="hr2">
+                            </div>
+                            <div class="zv6__boxs3" ondrop="drop(event)" ondragover="allowDrop(event)">JS
+                                <hr id="hr3">
+                            </div>
+                        </div>
+                        <div class="zv6__allAnswers">
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <img id="drag1"
+                                     src="img/CSS.svg" draggable="true" ondragstart="drag(event)" width="70"
+                                     height="60">
+                            </div>
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <img id="drag2"
+                                     src="img/HTML.svg" draggable="true" ondragstart="drag(event)" width="70"
+                                     height="60">
+                            </div>
+                            <div class="zv6__answers" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <img id="drag3"
+                                     src="img/JS.svg" draggable="true" ondragstart="drag(event)" width="70"
+                                     height="60">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+        <div class="result">
+
+        </div>
+    </div>
+
+
+</div>
+<script src="Web_JS/script.js" ></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script> <!--for e-mail sending-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!--for tg sending-->
+<script>
+
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        let data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</body>
+</html>
