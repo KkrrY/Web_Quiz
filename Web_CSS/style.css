@@ -203,9 +203,11 @@ hr {
 .sendForm{
     position: absolute;
     bottom: -5vmin;
+    display: none;
     z-index: -1;
 }
 .enableSendButton {
+    display: block;
     position: absolute;
     bottom: 30vmin;
     z-index: 6;
