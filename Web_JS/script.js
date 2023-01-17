@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'Ні',], 0)
     let question9 = new Question('dragDrop', 'Встановіть відповідність',
         [], [])
-    let question10 = new Question('CSS', 'Змініть колір фону екрану на світло-блакитний (lightblue) за допомогою CSS',
-        [], [])
+    let question10 = new Question('CSS', 'Змініть колір фону екрану на світло-синій (lightblue) за допомогою CSS',
+        ['color:lightblue'], [])
 
     let questions = [question1, question2, question3, question4,
         question5, question6, question7, question8,question9, question10];
@@ -227,11 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
             case "CSS":
                     let cssField = document.getElementById("field-css");
                     let value = cssField.value;
+                    console.log("entered: " + value);
                     let screen =  document.querySelector(".wrapper");
                     screen.setAttribute("style", value)
                     console.log("Web_CSS " + value);
 
-                    if(screen.style.background === "lightblue"){
+                    if(value === question.answers[0]){ //if value(user input) corresponds to required color (as marked as answer in this question)
                         rating++;
                     }
                     console.log("color " + screen.style.background);
